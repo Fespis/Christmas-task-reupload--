@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christmas</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="pages">
+      <div class="page1 block">
+        <div class="page1-background">
+          <div class="page1-center">
+            <div class="page1-center-title">
+              Новогодняя игра <br />
+              «Наряди ёлку»
+            </div>
+            <div class="page1-center-button" data-topage="page2" data-frompage="page1">Начать</div>
+          </div>
+        </div>
+      </div>
+      <div class="page2 hidden">
+        <div class="page2-center">
+          <div class="page2-settings">
+            <div class="page2-settings-nav">
+              <p class="page2-settings-nav-page1" data-topage="page1" data-frompage="page2">Меню</p>
+              <p class="page2-settings-nav-page3" data-topage="page3" data-frompage="page2">Ёлка</p>
+              <input type="search" class="page2-settings-nav-search" placeholder="Поиск" />
+            </div>
+            <div class="page2-settings-sort">
+              <p>Сортировать</p>
+              <select name="select" class="page2-settings-sort-select">
+                <option value="От А до Я" selected>От "А" до "Я"</option>
+                <option value="От Я до А">От "Я" до "А"</option>
+                <option value="По возрастанию">По возрастанию</option>
+                <option value="По убыванию">По убыванию</option>
+              </select>
+            </div>
+            <div class="page2-settings-form">
+              <p>Форма:</p>
+              <div class="page2-settings-formdiv">
+                <div class="page2-settings-formitem" data-filter="Колокольчик" data-item="shape">
+                  <img src="images/page2/settings/bellbell.svg" alt="Колокол" />
+                  <p class="title-form">Колокольчик</p>
+                </div>
+                <div class="page2-settings-formitem" data-filter="Шар" data-item="shape">
+                  <img src="images/page2/settings/ballball.svg" alt="Шар" />
+                  <p class="title-form">Шар</p>
+                </div>
+                <div class="page2-settings-formitem" data-filter="Шишка" data-item="shape">
+                  <img src="images/page2/settings/pinepine.svg" alt="Шишка" />
+                  <p class="title-form">Шишка</p>
+                </div>
+                <div class="page2-settings-formitem" data-filter="Снежинка" data-item="shape">
+                  <img src="images/page2/settings/snowflakesnow.svg" alt="Снежинка" />
+                  <p class="title-form">Снежинка</p>
+                </div>
+                <div class="page2-settings-formitem" data-filter="Фигурка" data-item="shape">
+                  <img src="images/page2/settings/bird_toybird.svg" alt="Фигурка" />
+                  <p class="title-form">Фигурка</p>
+                </div>
+              </div>
+            </div>
+            <div class="page2-settings-color">
+              <p>Цвет:</p>
+              <div class="page2-settings-colordiv">
+                <div
+                  class="page2-settings-coloritem coloritem-white"
+                  data-filter="белый"
+                  data-item="color"
+                ></div>
+                <div
+                  class="page2-settings-coloritem coloritem-yellow"
+                  data-filter="желтый"
+                  data-item="color"
+                ></div>
+                <div
+                  class="page2-settings-coloritem coloritem-red"
+                  data-filter="красный"
+                  data-item="color"
+                ></div>
+                <div
+                  class="page2-settings-coloritem coloritem-blue"
+                  data-filter="синий"
+                  data-item="color"
+                ></div>
+                <div
+                  class="page2-settings-coloritem coloritem-green"
+                  data-filter="зелёный"
+                  data-item="color"
+                ></div>
+              </div>
+            </div>
+            <div class="page2-settings-size">
+              <p>Размер:</p>
+              <div class="page2-settings-sizediv">
+                <div
+                  class="page2-settings-sizeitem sizeitem-big"
+                  data-filter="большой"
+                  data-item="size"
+                ></div>
+                <div
+                  class="page2-settings-sizeitem sizeitem-average"
+                  data-filter="средний"
+                  data-item="size"
+                ></div>
+                <div
+                  class="page2-settings-sizeitem sizeitem-small"
+                  data-filter="малый"
+                  data-item="size"
+                ></div>
+              </div>
+            </div>
+            <div class="page2-settings-filter">
+              <p>Фильтры по диапозону:</p>
+              <div class="page2-settings-filterdiv">
+                <p>Количество экземпляров</p>
+                <div class="middle-count">
+                  <div class="multi-range-slider">
+                    <input
+                      class="page2-inputs-count"
+                      type="range"
+                      id="input-left-count"
+                      min="1"
+                      step="1"
+                      max="12"
+                      value="1"
+                    />
+                    <input
+                      class="page2-inputs-count"
+                      type="range"
+                      id="input-right-count"
+                      min="1"
+                      step="1"
+                      max="12"
+                      value="12"
+                    />
+
+                    <div class="slider-count">
+                      <div class="track"></div>
+                      <div class="range"></div>
+                      <div class="thumb left"></div>
+                      <div class="thumb right"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page2-iputs-result">
+                  <p id="page2-inputs-count-min">1</p>
+                  <p id="page2-inputs-count-max">12</p>
+                </div>
+              </div>
+              <div class="page2-settings-filterdiv">
+                <p>Год приобретения</p>
+                <div class="middle-year">
+                  <div class="multi-range-slider">
+                    <input
+                      class="page2-inputs-year"
+                      type="range"
+                      id="input-left-year"
+                      min="1940"
+                      step="10"
+                      max="2020"
+                      value="1940"
+                    />
+                    <input
+                      class="page2-inputs-year"
+                      type="range"
+                      id="input-right-year"
+                      min="1940"
+                      step="10"
+                      max="2020"
+                      value="2020"
+                    />
+                    <div class="slider-year">
+                      <div class="track"></div>
+                      <div class="range"></div>
+                      <div class="thumb left"></div>
+                      <div class="thumb right"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page2-iputs-result">
+                  <p id="page2-inputs-year-min">1940</p>
+                  <p id="page2-inputs-year-max">2020</p>
+                </div>
+              </div>
+            </div>
+            <div class="page2-settings-favorites">
+              <div class="page2-settings-favorites-title" data-filter="true" data-item="favorite">
+                Только любимые
+              </div>
+            </div>
+            <div class="page2-settings-button">Сброс фильтров</div>
+          </div>
+          <div class="page2-toys">
+            <div class="page2-toys-header">
+              <p>Игрушки</p>
+              <p class="page2-toys-favorites">Избранное: 0</p>
+            </div>
+            <div class="page2-toys-container"></div>
+          </div>
+          <div class="page2-max-favorites hidden">
+            <p>Извините, все слоты заполнены</p>
+            <div
+              class="page2-max-favorites-button"
+              data-topage="page2"
+              data-frompage="page2-max-favorites"
+            >
+              Понял, принял!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page3 hidden">
+        <div class="page3-all">
+          <div class="page3-menu">
+            <div class="page3-nav">
+              <p class="page3-settings-nav-page1" data-topage="page1" data-frompage="page3">Меню</p>
+              <p class="page3-settings-nav-page2" data-topage="page2" data-frompage="page3">
+                Игрушки
+              </p>
+            </div>
+            <div class="page3-menu-svgcontainer">
+              <div class="page3-menu-music"></div>
+              <div class="page3-menu-snow"></div>
+            </div>
+            <div class="page3-menu-trees">
+              <p>Выберите Ёлку</p>
+              <div class="page3-menu-divtrees">
+                <div class="page3-menu-itemtrees" data-tree="1"></div>
+                <div class="page3-menu-itemtrees" data-tree="2"></div>
+                <div class="page3-menu-itemtrees" data-tree="3"></div>
+                <div class="page3-menu-itemtrees" data-tree="4"></div>
+                <div class="page3-menu-itemtrees" data-tree="5"></div>
+                <div class="page3-menu-itemtrees" data-tree="6"></div>
+              </div>
+            </div>
+            <div class="page3-menu-background">
+              <p>Выберите фон</p>
+              <div class="page3-menu-divbackground">
+                <div class="page3-menu-itembackground" data-bg="1"></div>
+                <div class="page3-menu-itembackground" data-bg="2"></div>
+                <div class="page3-menu-itembackground" data-bg="3"></div>
+                <div class="page3-menu-itembackground" data-bg="4"></div>
+                <div class="page3-menu-itembackground" data-bg="5"></div>
+                <div class="page3-menu-itembackground" data-bg="6"></div>
+                <div class="page3-menu-itembackground" data-bg="7"></div>
+                <div class="page3-menu-itembackground" data-bg="8"></div>
+                <div class="page3-menu-itembackground" data-bg="9"></div>
+                <div class="page3-menu-itembackground" data-bg="10"></div>
+              </div>
+            </div>
+            <div class="page3-menu-garland">
+              <p>Гирлянда</p>
+              <div class="page3-menu-divgarland">
+                <button
+                  class="page3-menu-itemgarland multicolor-btn"
+                  data-btncolor="multicolor"
+                ></button>
+                <button class="page3-menu-itemgarland red-btn" data-btncolor="red"></button>
+                <button class="page3-menu-itemgarland blue-btn" data-btncolor="blue"></button>
+                <button class="page3-menu-itemgarland yellow-btn" data-btncolor="yellow"></button>
+                <button class="page3-menu-itemgarland green-btn" data-btncolor="green"></button>
+                <div class="page3-menu-btngarland" data-filter="true">Выкл</div>
+              </div>
+            </div>
+          </div>
+          <div class="page3-background">
+            <div class="page3-background-wrapper hidden"></div>
+            <div class="garland-tree-container">
+              <ul class="lightrope" style="width: 120px; height: 120px"></ul>
+              <ul class="lightrope" style="width: 170px; height: 170px"></ul>
+              <ul class="lightrope" style="width: 230px; height: 230px"></ul>
+              <ul class="lightrope" style="width: 300px; height: 300px"></ul>
+              <ul class="lightrope" style="width: 380px; height: 380px"></ul>
+              <ul class="lightrope" style="width: 465px; height: 465px"></ul>
+              <ul class="lightrope" style="width: 555px; height: 555px"></ul>
+              <img class="page-background-tree" src="./images/page3/trees/1.png" alt="" />
+            </div>
+          </div>
+          <div class="page3-toys">
+            <div class="page3-toys-alltoys">
+              <p>Игрушки</p>
+              <div class="page3-toys-divalltoys"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-container">
+      <div class="footer-info">
+        <p class="footer-name">
+          <a class="footer-link" href="https://github.com/fespis">Работу выполнил: Никита Жук</a>
+        </p>
+      </div>
+      <a class="footer-link" href="https://rs.school/js/"> The Rolling Scopes </a>
+    </footer>
+  </body>
+</html>
